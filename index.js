@@ -20,7 +20,6 @@ const isLocationValid = function isLocationVaid(location) {
 app.use(bodyParser.json());
 
 app.post("/api/save_location_html_file", (req, res) => {
-  console.log(req.body);
   const { location } = req.body;
   if (isLocationValid(location)) {
     let htmlTemplate = createHtmlTemplate(location);
